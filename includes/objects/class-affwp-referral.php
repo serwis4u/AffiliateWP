@@ -197,20 +197,4 @@ final class Referral extends Object {
 		return parent::get_instance( $object_id );
 	}
 
-	/**
-	 * Constructor.
-	 *
-	 * @since 1.9
-	 * @access public
-	 *
-	 * @param Referral $referral Referral object.
-	 */
-	public function __construct( $referral ) {
-		parent::__construct( $referral );
-
-		$primary_key = affiliate_wp()->referrals->primary_key;
-
-		$this->ID = $this->{$primary_key};
-	}
-
 }

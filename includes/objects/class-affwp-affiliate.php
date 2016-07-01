@@ -176,22 +176,6 @@ final class Affiliate extends Object {
 	}
 
 	/**
-	 * Constructor.
-	 *
-	 * @since 1.9
-	 * @access public
-	 *
-	 * @param Affiliate $affiliate Affiliate object.
-	 */
-	public function __construct( $affiliate ) {
-		parent::__construct( $affiliate );
-
-		$primary_key = affiliate_wp()->affiliates->primary_key;
-
-		$this->ID = $this->{$primary_key};
-	}
-
-	/**
 	 * Retrieves the affiliate rate type.
 	 *
 	 * @since 1.9

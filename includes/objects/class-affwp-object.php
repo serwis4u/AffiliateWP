@@ -119,7 +119,13 @@ abstract class Object {
 	 * @return mixed Otherwise, the value of the property if set.
 	 */
 	public function __get( $key ) {
-		if ( isset( $this->{$key} ) ) {
+		if ( 'ID' === $key ) {
+			$Sub_Class    = get_called_class();
+			$object_group = $Sub_Class::$object_group;
+			$primary_key  = affiliate_wp()->{$object_group}->primary_key;
+
+			return $this->{$primary_key};
+		} elseif ( isset( $this->{$key} ) ) {
 			return $this->{$key};
 		}
 	}

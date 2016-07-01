@@ -152,20 +152,4 @@ final class Visit extends Object {
 		return parent::get_instance( $object_id );
 	}
 
-	/**
-	 * Constructor.
-	 *
-	 * @since 1.9
-	 * @access public
-	 *
-	 * @param Visit $visit Visit object.
-	 */
-	public function __construct( $visit ) {
-		parent::__construct( $visit );
-
-		$primary_key = affiliate_wp()->visits->primary_key;
-
-		$this->ID = $this->{$primary_key};
-	}
-
 }

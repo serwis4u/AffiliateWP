@@ -152,20 +152,4 @@ final class Creative extends Object {
 		return parent::get_instance( $object_id );
 	}
 
-	/**
-	 * Constructor.
-	 *
-	 * @since 1.9
-	 * @access public
-	 *
-	 * @param Creative $creative Creative object.
-	 */
-	public function __construct( $creative ) {
-		parent::__construct( $creative );
-
-		$primary_key = affiliate_wp()->creatives->primary_key;
-
-		$this->ID = $this->{$primary_key};
-	}
-
 }
