@@ -27,8 +27,6 @@ class CLI extends \AffWP\Object\CLI {
 		'name',
 		'status',
 		'url',
-		'description',
-		'text',
 		'image',
 		'date'
 	);
@@ -254,11 +252,14 @@ class CLI extends \AffWP\Object\CLI {
 	 * * ID (alias for creative_id)
 	 * * name
 	 * * url
-	 * * description
-	 * * text
 	 * * image
 	 * * status
 	 * * date
+	 *
+	 * These fields are optionally available:
+	 *
+	 * * description
+	 * * text
 	 *
 	 * ## EXAMPLES
 	 *
